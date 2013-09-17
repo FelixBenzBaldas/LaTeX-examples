@@ -3,24 +3,24 @@
 \begin{enumerate}
     \item Ordnung 3 kann durch geschickte Gewichtswahl erzwungen werden.
     \item Ordnung 4 ist automatisch gegeben, da die QF symmetrisch sein soll.
-    \item Aufgrund der Symmetrie gilt Äquivalenz zwischen Ordnung 5 und 6. 
-          Denn eine hätte die QF Ordnung 5, so wäre wegen der 
-          Symmetrie Ordnung 6 direkt gegeben. Ordnung 6 wäre aber 
-          bei der Quadraturformel mit 3 Knoten das Maximum, was nur 
-          mit der Gauß-QF erreicht werden kann. Da aber $c_1 = 0$ gilt, 
-          kann es sich hier nicht um die Gauß-QF handeln. Wegen 
+    \item Aufgrund der Symmetrie gilt Äquivalenz zwischen Ordnung 5 und 6.
+          Denn eine hätte die QF Ordnung 5, so wäre wegen der
+          Symmetrie Ordnung 6 direkt gegeben. Ordnung 6 wäre aber
+          bei der Quadraturformel mit 3 Knoten das Maximum, was nur
+          mit der Gauß-QF erreicht werden kann. Da aber $c_1 = 0$ gilt,
+          kann es sich hier nicht um die Gauß-QF handeln. Wegen
           erwähnter Äquivalenz kann die QF auch nicht Ordnung 5 haben.
 \end{enumerate}
 
-Da $c_1 = 0$ gilt, muss $c_3 = 0$ sein. Und dann muss $c_2 = \frac{1}{2}$
-sein. Es müssen nun die Gewichte bestimmt werden um Ordnung 3 zu 
+Da $c_1 = 0$ gilt, muss $c_3 = 1$ sein (Symmetrie). Und dann muss $c_2 = \frac{1}{2}$
+sein. Es müssen nun die Gewichte bestimmt werden um Ordnung 3 zu
 garantieren mit:
 
 \begin{align}
     b_i &= \int_0^1 L_i(x) \mathrm{d}x\\
     b_1 &= \frac{1}{6},\\
     b_2 &= \frac{4}{6},\\
-    b_4 &= \frac{1}{6}
+    b_3 &= \frac{1}{6}
 \end{align}
 
 \subsection*{Teilaufgabe b)}
@@ -35,6 +35,7 @@ ist. Wenn diese nun auf $N$ Intervalle aufgepflittet wird gilt folgendes:
 	\int_a^b f(x) \mathrm{d}x &= h \cdot \frac{1}{6} \cdot \left [ f(a) + f(b) + 2 \cdot \sum_{i=1}^{N-1} f(a + i \cdot h) + 4 \cdot \sum_{l=0}^{N-1} f(a + \frac{1}{2} \cdot h + l \cdot h)\right ]
 \end{align}
 
+<<<<<<< HEAD
 $\sum_{i=1}^{N-1} f(a + i \cdot h)$ steht für die Grenzknoten
  (deshalb werden sie doppelt gezählt). Von den Grenzknoten gibt es 
 insgesamt $N-2$ Stück, da die tatsächlichen Integralgrenzen $a$ und $b$ 
@@ -42,6 +43,20 @@ nur einmal in die Berechnung mit einfließen.
 
 $\sum_{l=0}^{N-1} f(a + \frac{1}{2} \cdot h + l \cdot h)$ sind die jeweiligen 
 mittleren Knoten der Intervalle. Davon gibt es $N$ Stück.
+=======
+$\sum_{i=1}^{N-1} f(i \cdot \frac{1}{N})$  sind die Grenzknoten der Intervalle
+ (deshalb werden sie doppelt gezählt). Von den Grenzknoten gibt es
+insgesamt $s-2$ Stück, da die tatsächlichen Integralgrenzen $a$ und $b$
+nur einmal in die Berechnung mit einfließen.
+
+$\sum_{i=1}^N f(i \cdot \frac{1}{2N})$ sind die jeweiligen
+mittleren Knoten der Intervalle. Davon gibt es $s-1$ Stück.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics*[width=\linewidth, keepaspectratio]{aufgabe4-b.png}
+\end{figure}
+>>>>>>> upstream/master
 
 \subsection*{Teilaufgabe c)}
 TODO
